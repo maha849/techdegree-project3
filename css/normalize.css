@@ -376,6 +376,10 @@ p{
   clear: both;
 }
 
+fieldset{
+  border: none;
+}
+
 /* firefox font fix */
 
 /**

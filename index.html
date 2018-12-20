@@ -10,85 +10,102 @@
   <title>Document</title>
 </head>
 <body>
+  <!--  Header -->
   <header>
     <h1>the code review</h1>
   </header>
+  <!-- Wrapper -->
   <div class="wrapper">
+    <!-- Form intro -->
     <div class="newsletter">
-      <h2>signup for our newsletter</h2>
+      <h2>Signup for our newsletter</h2>
       <p>Get the latest news on how your code is doing right in your inbox</p>
     </div>
-    <main>
-      <form action="#">
-        <fieldset>
-          <legend>contact information</legend>
-          <div>
-            <label for="fullName">full name</label>
-            <input type="text" id="fullName" name="user_name" placeholder="required" required>
-          </div>
-          <div>
-            <label for="mail">email address</label>
-            <input type="email" id="mail" name="user_email" placeholder="required" required>
-          </div>
-          <div>
-            <label for="phone">phone number</label>
-            <input type="tel" id="phone" name="user_phone">
-          </div>
-          <div>
-            <label for="address">street address</label>
-            <input type="text" id="address" name="user_address">
-          </div>
-          <div>
-            <label for="city">city</label>
-            <input type="text" id="city" name="user_city">
-          </div>
-          <div>
-            <label for="state">state</label>
-            <select name="states" id="state">
-              <option value="" disabled selected>Choose state</option>
-              <option value="tamizhnadu">tamizhnadu</option>
-              <option value="kerala">kerala</option>
-              <option value="andhra">andhra</option>
-            </select>
-          </div>
-          <div>
-            <label for="zip">zipcode</label>
-            <input id="zip" name="zip" type="text" pattern="[0-9]*">
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>newsletter</legend>
-          <p>select the newsletters you would like to recieve</p>
-          <div>
+    <!-- Form structure -->
+    <form action="#">
+      <!-- Contact information -->
+      <fieldset>
+        <legend>contact information</legend>
+        <div class="flexer">
+          <label for="fullName">full name</label>
+          <input type="text" id="fullName" name="user_name" placeholder="Required" required>
+        </div>
+        <div class="flexer">
+          <label for="mail">email address</label>
+          <input type="email" id="mail" name="user_email" placeholder="Required" required>
+        </div>
+        <div class="flexer">
+          <label for="phone">phone number</label>
+          <input type="tel" id="phone" name="user_phone">
+        </div>
+        <div class="flexer">
+          <label for="address">street address</label>
+          <input type="text" id="address" name="user_address">
+        </div>
+        <div class="flexer">
+          <label for="city">city</label>
+          <input type="text" id="city" name="user_city">
+        </div>
+        <div class="flexer">
+          <label for="state">state</label>
+          <select name="states" id="state">
+            <option value="" disabled selected>&nbsp;</option>
+            <option value="tamizhnadu">Tamizhnadu</option>
+            <option value="kerala">Kerala</option>
+            <option value="andhra">Andhra</option>
+          </select>
+        </div>
+        <div class="flexer">
+          <label for="zip">zipcode</label>
+          <input id="zip" name="zip" type="text" pattern="[0-9]*">
+        </div>
+      </fieldset>
+      <!-- Newsletter options -->
+      <fieldset>
+        <legend>newsletter</legend>
+        <h3>Select the newsletters you would like to recieve</h3>
+        <div class="news">
+          <label for="html_news" class="container">
             <input type="checkbox" name="news" value="html" id="html_news">
-            <label for="html_news">html news</label>
-          </div>
-          <div>
+            <span class="checkmark"></span>
+            HTML News
+          </label>
+          <label for="css_news" class="container">
             <input type="checkbox" name="news" value="css" id="css_news">
-            <label for="css_news">css news</label>
-          </div>
-          <div>
+            <span class="checkmark"></span>
+            CSS News
+          </label>
+          <label for="js_news" class="container">
             <input type="checkbox" name="news" value="js" id="js_news">
-            <label for="js_news">javascript news</label>
-          </div>
-          <p>newsletter format</p>
-          <div>
+            <span class="checkmark"></span>
+            Javascript News
+          </label>
+        </div>
+        <h3>Newsletter format</h3>
+        <div class="news">
+          <label for="html" class="container">
             <input type="radio" name="format" value="html" id="html">
-            <label for="html">html</label>
-          </div>
-          <div>
+            <span class="checkmark"></span>
+            HTML
+          </label>
+          <label for="plain" class="container">
             <input type="radio" name="format" value="plain" id="plain">
-            <label for="plain">plian text</label>
-          </div>
-          <div>
-            <label for="msg">other topics you'd like to hear about</label>
-            <textarea id="msg" name="message"></textarea>
-          </div>
-        </fieldset>
-        <input type="submit" value="sign up">
-      </form>
-      <span>copyright the code review</span>
-    </main>
+            <span class="checkmark"></span>
+            Plian text
+          </label>
+        </div>
+        <!-- Message area -->
+        <label for="msg">Other topics you'd like to hear about</label>
+        <textarea id="msg" name="message" placeholder="Write your feedback here..."></textarea>
+      </fieldset>
+      <input type="submit" value="Sign Up">
+    </form>
+    <!-- Form end -->
   </div>
+  <!-- Wrapper end -->
+  <!-- Footer area -->
+  <footer>
+    <span>copyright the code review</span>
+  </footer>
 </body>
 </html>

@@ -1,3 +1,6 @@
+
+/* ******** Sectional styles ******** */
+
 body{
   font-family: 'Merriweather', serif;
 }
@@ -8,66 +11,204 @@ body{
 }
 
 header{
-  text-align: center;
-  background: #2d3945;
-  padding: 1em 0;
-  }
-
-main{
-  padding: 1em 0;
+  background: #35847f;
 }
 
-h1{
+header, main, .newsletter, fieldset{
+  padding: 2em 0;
+}
+
+header, .newsletter{
+  text-align: center;
+}
+
+.newsletter{
+  border-bottom: 5px solid #235754;
+}
+
+fieldset{
+  margin: 2em 0 0;
+}
+
+fieldset:first-of-type{
+  border-bottom: 2px solid #235754;
+}
+
+/* ******** Heading styles ******** */
+
+h1, input[type="submit"]{
   text-transform: uppercase;
   color: white;
 }
 
-h2{
+h2, legend{
   color: #2d3945;
 }
 
-.newsletter{
-  text-align: center;
-  padding: 1em 0;
-  border-bottom: 5px solid #2d3945;
+h3{
+  font-weight: 300;
 }
 
-form fieldset:last-child{
+/* ******** Form styles ******** */
+
+input, select, textarea{
+  width: 100%;
   border: none;
+  background: #eff0f1;
+  border-radius: 5px;
+  padding: 1em;
+  line-height: 1.625em;
+  -webkit-transition: box-shadow 0.5s;
 }
 
-fieldset:first-child{
-  padding: 2em 0;
-  border-bottom: 2px solid #2d3945;
+label{
+  display: block;
+  margin: 5px 0 5px;
+  color: #3a546b;
 }
 
 legend{
   font-size: 1.5em;
 }
 
-label{
-  text-transform: capitalize;
-  display: block;
-  margin: 5px 0 5px 5px;
+textarea{
+  height: 10em;
 }
 
-input, select{
-  width: 100%;
-  padding: 0.5em;
-  height: 2em;
-  border: none;
-  border-radius: 5px;
-  background: #eff0f1;
+input, label, select{
+  cursor: pointer;
+}
+
+fieldset .flexer{
+  margin-bottom: 1.5em;
+}
+
+fieldset:first-of-type label, legend{
+  text-transform: capitalize;
+}
+
+.news:nth-of-type(2n){
+  margin-bottom: 2em;
+}
+
+.news:nth-of-type(2n)+label{
+  margin-bottom: 1em;
+}
+
+textarea:focus, select:focus, fieldset:first-of-type input:focus{
+  box-shadow: 0 0 5px 1px #66f0e8;
+  outline: none
 }
 
 input#zip{
   width: 50%;
 }
 
-input[placeholder]{
+input[placeholder="Required"]::placeholder{
   text-align: right;
+  color: #b3b8bb;
 }
 
-main div{
-  margin-bottom: 15px;
+input[type="submit"]{
+  font-size: 2em;
+  padding: 0.5em;
+  background-color: #52bab4;
+  transition: background-color 1s;
+}
+
+input[type="submit"]:hover{
+  background-color: #35847f;
+}
+
+footer{
+  text-align: center;
+  color: #b3b8bb;
+  margin: 1em 0;
+}
+
+.news{
+  margin: 1em 0 1.5em 1em;
+}
+
+.container{
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.container input, .checkmark{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.1em;
+  width: 1.1em;
+}
+
+.container input{
+  opacity: 0;
+}
+
+.checkmark {
+  background-color: #eff0f1;
+  transition: background-color 1s;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #52bab4;
+}
+
+.container .checkmark:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.checkmark:after{
+  display: none;
+}
+
+input:checked ~ .checkmark:after{
+  display: block;
+}
+
+input[type=radio] ~ .checkmark:after{
+  top: 6px;
+  left: 6px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: white;
+  }
+
+input[type=radio] ~ .checkmark{
+  border-radius: 50%;
+}
+
+/* ******** Media queries ******** */
+
+@media (min-width: 768px){
+
+  .wrapper{
+    width: 50%;
+  }
+  .flexer{
+    display: flex;
+  }
+  fieldset:first-of-type input, select{
+    flex-basis: 70%;
+  }
+  fieldset:first-of-type label{
+    line-height: 3em;
+    flex-basis: 30%;
+  }
+  input#zip{
+    flex-basis: 20%;
+  }
+
 }
