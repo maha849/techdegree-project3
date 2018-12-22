@@ -106,6 +106,9 @@ input#zip{
 
 input[placeholder="Required"]::placeholder{
   text-align: right;
+}
+
+input::placeholder, input[placeholder="Required"]::placeholder, textarea::placeholder{
   color: #b3b8bb;
 }
 

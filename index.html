@@ -36,20 +36,20 @@
         </div>
         <div class="flexer">
           <label for="phone">phone number</label>
-          <input type="tel" id="phone" name="user_phone">
+          <input type="tel" id="phone" name="user_phone" placeholder="9723133248">
         </div>
         <div class="flexer">
           <label for="address">street address</label>
-          <input type="text" id="address" name="user_address">
+          <input type="text" id="address" name="user_address" placeholder="Military colony">
         </div>
         <div class="flexer">
           <label for="city">city</label>
-          <input type="text" id="city" name="user_city">
+          <input type="text" id="city" name="user_city" placeholder="Chennai">
         </div>
         <div class="flexer">
           <label for="state">state</label>
           <select name="states" id="state">
-            <option value="" disabled selected>&nbsp;</option>
+            <option value="" disabled selected>Choose a state</option>
             <option value="tamizhnadu">Tamizhnadu</option>
             <option value="kerala">Kerala</option>
             <option value="andhra">Andhra</option>
@@ -57,7 +57,7 @@
         </div>
         <div class="flexer">
           <label for="zip">zipcode</label>
-          <input id="zip" name="zip" type="text" pattern="[0-9]*">
+          <input id="zip" name="zip" type="text" pattern="[0-9]*" placeholder="000374">
         </div>
       </fieldset>
       <!-- Newsletter options -->
@@ -98,7 +98,7 @@
         <label for="msg">Other topics you'd like to hear about</label>
         <textarea id="msg" name="message" placeholder="Write your feedback here..."></textarea>
       </fieldset>
-      <input type="submit" value="Sign Up">
+      <input type="submit" value="Sign Up" id="submit" name="signup">
     </form>
     <!-- Form end -->
   </div>
