@@ -36,7 +36,7 @@ fieldset:first-of-type{
 
 /* ******** Heading styles ******** */
 
-h1, input[type="submit"]{
+h1, button[type="submit"]{
   text-transform: uppercase;
   color: white;
 }
@@ -51,7 +51,7 @@ h3{
 
 /* ******** Form styles ******** */
 
-input, select, textarea{
+input, select, textarea, button{
   width: 100%;
   border: none;
   background: #eff0f1;
@@ -75,7 +75,7 @@ textarea{
   height: 10em;
 }
 
-input, label, select{
+input, label, select, button{
   cursor: pointer;
 }
 
@@ -112,14 +112,14 @@ input::placeholder, input[placeholder="Required"]::placeholder, textarea::placeh
   color: #b3b8bb;
 }
 
-input[type="submit"]{
+button[type="submit"]{
   font-size: 2em;
   padding: 0.5em;
   background-color: #52bab4;
   transition: background-color 1s;
 }
 
-input[type="submit"]:hover{
+button[type="submit"]:hover{
   background-color: #35847f;
 }
 
